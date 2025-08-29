@@ -1,0 +1,84 @@
+---
+alwaysApply: true
+---
+# 프론트엔드 개발 가이드라인
+
+## 개요
+이 문서는 플랫폼 프론트엔드 개발을 위한 전체적인 구조와 흐름을 제시합니다. 일관된 코드 스타일과 아키텍처를 유지하기 위한 기본 원칙을 다룹니다.
+
+## 기술 스택
+- **프레임워크**: Next.js 15 (App Router)
+- **언어**: TypeScript
+- **UI 라이브러리**: React 19
+- **상태관리**: Zustand (클라이언트 상태), TanStack Query (서버 상태)
+- **스타일링**: Tailwind CSS v4, shadcn/ui
+- **폼 관리**: React Hook Form + Zod
+- **날짜 처리**: Day.js
+- **데이터 시각화**: Recharts
+- **테스트**: Jest + Testing Library
+- **드래그앤드롭**: @dnd-kit
+
+## 프로젝트 구조
+```
+src/
+├─ app/                 # Next.js App Router 페이지
+│  ├─ api/             # API 라우트
+│  ├─ [feature]/       # 기능별 페이지 라우트
+│  ├─ globals.css      # 전역 스타일
+│  ├─ layout.tsx       # 루트 레이아웃
+│  └─ providers.tsx    # 전역 프로바이더
+├─ components/         # Atomic Design 기반 컴포넌트
+│  ├─ atoms/          # 기본 원자 컴포넌트 (Button, Input, Avatar 등)
+│  ├─ molecules/      # 분자 컴포넌트 (조합된 UI 요소)
+│  ├─ organisms/      # 유기체 컴포넌트 (복잡한 UI 블록)
+│  └─ templates/      # 페이지 템플릿
+├─ __tests__/         # 통합 테스트
+├─ hooks/             # 전역 훅
+├─ lib/               # 전역 유틸리티
+│  ├─ api.ts          # API 클라이언트
+│  ├─ query-client.ts # TanStack Query 설정
+│  ├─ mock-data.ts    # 목 데이터
+│  └─ utils.ts        # 유틸리티 함수
+├─ store/             # 전역 상태 (Zustand)
+└─ types/             # 전역 타입 정의
+```
+
+## 네이밍 컨벤션
+- **컴포넌트**: PascalCase (예: `UserProfile.tsx`)
+- **훅**: camelCase + 'use' 접두사 (예: `useUserQuery.ts`)
+- **유틸리티**: camelCase (예: `formatDate.ts`)
+- **타입**: camelCase (예: `types.ts`)
+- **상태관리**: camelCase + 'Store' 접미사 (예: `userStore.ts`)
+
+## 개발 프로세스
+1. **페이지 생성**: `app/[feature]/` 경로에 페이지 파일 생성
+2. **컴포넌트 설계**: Atomic Design 패턴에 따라 atoms → molecules → organisms → templates 순으로 개발
+3. **API 라우트**: `app/api/` 경로에 서버 사이드 API 생성
+4. **상태 관리**: Zustand(클라이언트) + TanStack Query(서버) 조합으로 상태 관리
+5. **테스트 작성**: Jest + Testing Library로 컴포넌트 및 통합 테스트 작성
+6. **문서화**: 필요시 컴포넌트 및 기능 문서 작성
+
+## 주요 개발 규칙
+- **Atomic Design**: atoms → molecules → organisms → templates 계층 구조 준수
+- **컴포넌트**: 재사용 가능하고 단일 책임 원칙 준수
+- **페이지**: 검색 및 데이터 그리드 기능 표준화
+- **스타일**: Tailwind CSS v4 기반 일관된 디자인 시스템
+- **UI 컴포넌트**: shadcn/ui + Radix UI 기반 접근성 고려
+- **모달**: Radix Dialog 기반 표준화된 모달 컴포넌트 사용
+- **데이터그리드**: 통일된 테이블/리스트 패턴
+- **폼**: React Hook Form + Zod 기반 폼 관리
+- **상태관리**: Zustand(클라이언트) + TanStack Query(서버) 조합
+- **드래그앤드롭**: @dnd-kit 라이브러리 활용
+- **테스트**: Jest + Testing Library 기반 단위/통합 테스트
+
+
+## 코드 품질
+- ESLint 규칙 준수
+- TypeScript strict mode 사용
+- Jest + Testing Library 기반 테스트 커버리지 유지
+- 일관된 코드 스타일 유지
+- Atomic Design 패턴 준수
+- 접근성(a11y) 고려한 컴포넌트 개발
+
+## 결론
+이 가이드라인은 개발 효율성과 코드 일관성을 위한 기본 원칙을 제시합니다. 모든 개발자가 이 원칙을 따라 일관된 코드베이스를 유지해야 합니다.
