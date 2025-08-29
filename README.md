@@ -1,2 +1,1 @@
 # fastcampus-cursor
-# fastcampus-cursor
