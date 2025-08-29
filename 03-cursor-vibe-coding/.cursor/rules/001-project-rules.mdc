@@ -1,0 +1,88 @@
+---
+alwaysApply: true
+description: 칸반 보드 프로젝트의 기본 개발 규칙 및 아키텍처 가이드
+---
+
+# 칸반 보드 프로젝트 개발 규칙
+
+## 기술 스택
+- **Frontend**: React.js, Zustand (상태 관리), @dnd-kit/core (드래그 앤 드롭), React Router (페이지 라우팅)
+- **Backend**: Supabase (Postgres DB, Realtime Subscriptions, Auto-generated APIs)
+- **배포**: Vercel
+
+## 폴더 구조 규칙
+
+프로젝트는 다음 구조를 따라야 합니다:
+
+```
+src/
+├── components/          # 공용 UI 컴포넌트
+│   ├── board/           # 보드 관련 컴포넌트
+│   │   ├── Board.jsx
+│   │   ├── Column.jsx
+│   │   └── Card.jsx
+│   └── common/          # 버튼, 모달 등 범용 컴포넌트
+│       └── Button.jsx
+├── pages/               # 라우팅 단위 페이지 컴포넌트
+│   ├── HomePage.jsx     # 메인 페이지 (보드 목록, 새 보드 생성)
+│   └── BoardPage.jsx    # 특정 보드 상세 페이지
+├── lib/                 # 외부 서비스 설정
+│   └── supabaseClient.js # Supabase 클라이언트 초기화
+├── store/               # 전역 상태 관리 (Zustand)
+│   └── boardStore.js    # 현재 보드의 데이터(열, 카드) 및 관련 함수 관리
+├── App.jsx              # 라우터 설정 및 전역 레이아웃
+└── index.js             # 애플리케이션 진입점
+```
+
+## 데이터베이스 스키마
+
+### boards 테이블
+- `id`: uuid (Primary Key)
+- `created_at`: timestamptz
+- `name`: text (보드 이름)
+- `slug`: text (URL 경로, Unique)
+
+### columns 테이블
+- `id`: uuid (Primary Key)
+- `title`: text (열 제목)
+- `position`: integer (보드 내 열 순서)
+- `board_id`: uuid (Foreign Key to boards.id)
+
+### cards 테이블
+- `id`: uuid (Primary Key)
+- `title`: text (카드 제목)
+- `description`: text (카드 상세 설명, Nullable)
+- `position`: integer (열 내 카드 순서)
+- `column_id`: uuid (Foreign Key to columns.id)
+
+## 개발 규칙
+
+### 라우팅
+- React Router를 사용하여 `/` (홈)과 `/board/:slug` (보드 페이지) 경로 관리
+- URL의 `:slug` 파라미터로 보드 정보 조회
+
+### 상태 관리
+- Zustand를 사용하여 전역 상태 관리
+- 현재 보드의 열과 카드 데이터를 스토어에서 관리
+- 데이터베이스 동기화 로직을 스토어 액션에 포함
+
+### 실시간 동기화
+- BoardPage.jsx에서 useEffect로 현재 board_id의 변경사항 구독
+- Supabase Realtime을 통한 실시간 데이터 동기화
+
+### 보안
+- RLS(Row Level Security) 정책으로 익명 사용자 접근 허용
+- 로그인 없는 협업 지원
+
+### 컴포넌트 작성 규칙
+- 보드 관련 컴포넌트는 `components/board/` 디렉토리에 배치
+- 공용 컴포넌트는 `components/common/` 디렉토리에 배치
+- 페이지 컴포넌트는 `pages/` 디렉토리에 배치
+- 모든 컴포넌트는 JSX 확장자 사용
+
+### 네이밍 컨벤션
+- 컴포넌트 파일명: PascalCase (예: Board.jsx, HomePage.jsx)
+- 보드 slug: kebab-case (예: "new-feature-dev")
+- 데이터베이스 필드명: snake_case (예: board_id, created_at)
+
+참고 문서: [trd.md](mdc:trd.md)

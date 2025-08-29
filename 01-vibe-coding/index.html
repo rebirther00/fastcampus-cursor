@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIBE CODING - 혁신적인 웹 개발 솔루션</title>
+    <meta
+      name="description"
+      content="VIBE CODING과 함께 당신의 아이디어를 현실로 만들어보세요. 현대적이고 혁신적인 웹 개발 서비스를 제공합니다."
+    />
+    <meta
+      name="keywords"
+      content="웹개발, 프론트엔드, 백엔드, 풀스택, React, Node.js, 반응형웹"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="VIBE CODING - 혁신적인 웹 개발 솔루션" />
+    <meta
+      property="og:description"
+      content="당신의 아이디어를 현실로 만드는 최고의 웹 개발 파트너"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vibecoding.com" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>VIBE<span>CODING</span></h2>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">홈</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">소개</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link">서비스</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">포트폴리오</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonials" class="nav-link">후기</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">연락처</a>
+          </li>
+        </ul>
+        <div class="nav-auth">
+          <button class="nav-auth-btn" id="login-btn">로그인</button>
+          <button class="nav-auth-btn primary" id="signup-btn">회원가입</button>
+          <div class="user-menu" id="user-menu" style="display: none">
+            <div class="user-info">
+              <div class="user-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="user-details">
+                <span class="user-name" id="user-name">사용자명</span>
+                <span class="user-email" id="user-email">user@example.com</span>
+              </div>
+            </div>
+            <div class="user-menu-items">
+              <a href="#" class="user-menu-item">
+                <i class="fas fa-user-cog"></i>
+                <span>프로필 설정</span>
+              </a>
+              <a href="#" class="user-menu-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>보안 설정</span>
+              </a>
+              <a href="#" class="user-menu-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>로그아웃</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            당신의 아이디어를<br />
+            <span class="gradient-text">현실로 만들어보세요</span>
+          </h1>
+          <p class="hero-description">
+            VIBE CODING은 최신 기술과 창의적인 디자인으로 당신만의 특별한
+            웹사이트를 제작합니다.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">프로젝트 시작하기</a>
+            <a href="#portfolio" class="btn btn-secondary">포트폴리오 보기</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-count="150">0</span>
+              <span class="stat-label">완료된 프로젝트</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="98">0</span>
+              <span class="stat-label">고객 만족도 (%)</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="24">0</span>
+              <span class="stat-label">개월 경험</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-card card-1">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fab fa-node-js"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+          </div>
+          <div class="floating-card card-4">
+            <i class="fas fa-database"></i>
+            <span>Database</span>
+          </div>
+          <div class="hero-shape"></div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>스크롤해서 더 보기</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">VIBE CODING 소개</h2>
+          <p class="section-subtitle">혁신적인 기술로 미래를 만들어갑니다</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>우리는 단순한 개발팀이 아닙니다</h3>
+            <p>
+              VIBE CODING은 기술과 창의성이 만나는 곳입니다. 우리는 단순히
+              코드를 작성하는 것이 아니라, 당신의 비전을 현실로 만드는
+              파트너입니다.
+            </p>
+            <div class="about-features">
+              <div class="feature-item">
+                <i class="fas fa-rocket"></i>
+                <div>
+                  <h4>빠른 개발</h4>
+                  <p>최신 개발 방법론으로 빠르고 효율적인 개발</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>안정성</h4>
+                  <p>철저한 테스트와 보안으로 안정적인 서비스</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-users"></i>
+                <div>
+                  <h4>맞춤 서비스</h4>
+                  <p>고객의 니즈에 맞춘 개인화된 솔루션</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control red"></span>
+                  <span class="control yellow"></span>
+                  <span class="control green"></span>
+                </div>
+                <span class="window-title">app.js</span>
+              </div>
+              <div class="code-content">
+                <div class="code-line">
+                  <span class="line-number">1</span>
+                  <span class="code-text"
+                    ><span class="keyword">const</span>
+                    <span class="variable">dream</span> =
+                    <span class="string">'아이디어'</span>;</span
+                  >
+                </div>
+                <div class="code-line">
+                  <span class="line-number">2</span>
+                  <span class="code-text"
+                    ><span class="keyword">const</span>
+                    <span class="variable">reality</span> =
+                    <span class="function">vibeCoding</span>(<span
+                      class="variable"
+                      >dream</span
+                    >);</span
+                  >
+                </div>
+                <div class="code-line">
+                  <span class="line-number">3</span>
+                  <span class="code-text"
+                    ><span class="variable">console</span>.<span
+                      class="function"
+                      >log</span
+                    >(<span class="variable">reality</span>);
+                    <span class="comment">// 성공!</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">우리의 서비스</h2>
+          <p class="section-subtitle">
+            전문적이고 포괄적인 웹 개발 서비스를 제공합니다
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>웹 개발</h3>
+            <p>
+              React, Vue.js, Angular 등 최신 프레임워크를 활용한 현대적인 웹
+              애플리케이션 개발
+            </p>
+            <ul class="service-features">
+              <li>반응형 웹 디자인</li>
+              <li>SEO 최적화</li>
+              <li>성능 최적화</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>모바일 앱</h3>
+            <p>
+              React Native, Flutter를 이용한 크로스 플랫폼 모바일 애플리케이션
+              개발
+            </p>
+            <ul class="service-features">
+              <li>iOS & Android 동시 개발</li>
+              <li>네이티브 성능</li>
+              <li>앱스토어 배포 지원</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>백엔드 개발</h3>
+            <p>Node.js, Python, Java를 활용한 확장 가능한 서버 및 API 개발</p>
+            <ul class="service-features">
+              <li>RESTful API 설계</li>
+              <li>데이터베이스 설계</li>
+              <li>클라우드 배포</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX 디자인</h3>
+            <p>사용자 중심의 직관적이고 아름다운 인터페이스 디자인</p>
+            <ul class="service-features">
+              <li>와이어프레임 설계</li>
+              <li>프로토타입 제작</li>
+              <li>사용성 테스트</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>이커머스</h3>
+            <p>온라인 쇼핑몰 및 전자상거래 플랫폼 구축</p>
+            <ul class="service-features">
+              <li>결제 시스템 연동</li>
+              <li>재고 관리 시스템</li>
+              <li>주문 관리 시스템</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>유지보수</h3>
+            <p>지속적인 업데이트와 기술 지원으로 안정적인 서비스 운영</p>
+            <ul class="service-features">
+              <li>24/7 모니터링</li>
+              <li>정기 업데이트</li>
+              <li>기술 지원</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">포트폴리오</h2>
+          <p class="section-subtitle">
+            우리가 만든 성공적인 프로젝트들을 확인해보세요
+          </p>
+        </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="web">웹사이트</button>
+          <button class="filter-btn" data-filter="app">모바일 앱</button>
+          <button class="filter-btn" data-filter="ecommerce">이커머스</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <div class="placeholder-image web-bg">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>기업 홈페이지</h4>
+                <p>React + Node.js</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="app">
+            <div class="portfolio-image">
+              <div class="placeholder-image app-bg">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>헬스케어 앱</h4>
+                <p>React Native</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="ecommerce">
+            <div class="portfolio-image">
+              <div class="placeholder-image ecommerce-bg">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>온라인 쇼핑몰</h4>
+                <p>Vue.js + Express</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <div class="placeholder-image web-bg">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>대시보드 시스템</h4>
+                <p>Angular + Python</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="app">
+            <div class="portfolio-image">
+              <div class="placeholder-image app-bg">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>음식 배달 앱</h4>
+                <p>Flutter</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="web">
+            <div class="portfolio-image">
+              <div class="placeholder-image web-bg">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h4>교육 플랫폼</h4>
+                <p>Next.js + MongoDB</p>
+                <div class="portfolio-links">
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-eye"></i
+                  ></a>
+                  <a href="#" class="portfolio-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">고객 후기</h2>
+          <p class="section-subtitle">
+            함께 성공한 고객들의 생생한 후기를 확인해보세요
+          </p>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonial-item active">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "VIBE CODING과 함께 작업하면서 정말 놀라웠습니다. 우리의 비전을
+                완벽하게 이해하고 그 이상의 결과물을 만들어주었습니다."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>김민수</h4>
+                  <span>스타트업 CEO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "전문적인 기술력과 창의적인 아이디어로 우리 회사의 디지털 전환을
+                성공적으로 이끌어주었습니다."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>이지영</h4>
+                  <span>마케팅 디렉터</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "빠른 개발 속도와 완벽한 품질, 그리고 지속적인 지원까지. 정말
+                믿을 수 있는 파트너입니다."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="author-info">
+                  <h4>박준호</h4>
+                  <span>IT 팀장</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">연락처</h2>
+          <p class="section-subtitle">
+            프로젝트에 대해 상담받고 싶으시다면 언제든 연락주세요
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>함께 시작해볼까요?</h3>
+            <p>
+              당신의 아이디어를 현실로 만들어드립니다. 무료 상담을 통해
+              프로젝트의 가능성을 확인해보세요.
+            </p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>이메일</h4>
+                  <p>hello@vibecoding.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>전화번호</h4>
+                  <p>+82 10-1234-5678</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>주소</h4>
+                  <p>서울시 강남구 테헤란로 123</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="이메일"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="전화번호"
+              />
+            </div>
+            <div class="form-group">
+              <select id="service" name="service" required>
+                <option value="">서비스 선택</option>
+                <option value="web">웹 개발</option>
+                <option value="app">모바일 앱</option>
+                <option value="backend">백엔드 개발</option>
+                <option value="design">UI/UX 디자인</option>
+                <option value="ecommerce">이커머스</option>
+                <option value="maintenance">유지보수</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="프로젝트에 대해 자세히 알려주세요"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">상담 신청하기</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <h3>VIBE<span>CODING</span></h3>
+              <p>혁신적인 기술로 미래를 만들어갑니다</p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>서비스</h4>
+            <ul>
+              <li><a href="#services">웹 개발</a></li>
+              <li><a href="#services">모바일 앱</a></li>
+              <li><a href="#services">백엔드</a></li>
+              <li><a href="#services">UI/UX</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>회사</h4>
+            <ul>
+              <li><a href="#about">소개</a></li>
+              <li><a href="#portfolio">포트폴리오</a></li>
+              <li><a href="#testimonials">후기</a></li>
+              <li><a href="#contact">연락처</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>팔로우</h4>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 VIBE CODING. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+      <div class="modal-overlay" id="login-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>로그인</h3>
+          <button class="modal-close" id="login-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="auth-form" id="login-form">
+            <div class="form-group">
+              <label for="login-email">이메일</label>
+              <input
+                type="email"
+                id="login-email"
+                name="email"
+                placeholder="이메일을 입력하세요"
+                required
+              />
+              <span class="form-error" id="login-email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="login-password">비밀번호</label>
+              <div class="password-input">
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  placeholder="비밀번호를 입력하세요"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="login-password-toggle"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span class="form-error" id="login-password-error"></span>
+            </div>
+            <div class="form-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="remember-me" name="remember" />
+                <span class="checkmark"></span>
+                로그인 상태 유지
+              </label>
+              <a href="#" class="forgot-password" id="forgot-password-link"
+                >비밀번호를 잊으셨나요?</a
+              >
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              로그인
+            </button>
+          </form>
+
+          <div class="divider">
+            <span>또는</span>
+          </div>
+
+          <div class="social-login">
+            <button class="social-btn google-btn" id="google-login">
+              <i class="fab fa-google"></i>
+              <span>Google로 로그인</span>
+            </button>
+          </div>
+
+          <div class="auth-switch">
+            <p>
+              아직 계정이 없으신가요? <a href="#" id="show-signup">회원가입</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+      <div class="modal-overlay" id="signup-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>회원가입</h3>
+          <button class="modal-close" id="signup-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="auth-form" id="signup-form">
+            <div class="form-group">
+              <label for="signup-name">이름</label>
+              <input
+                type="text"
+                id="signup-name"
+                name="name"
+                placeholder="이름을 입력하세요"
+                required
+              />
+              <span class="form-error" id="signup-name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-email">이메일</label>
+              <input
+                type="email"
+                id="signup-email"
+                name="email"
+                placeholder="이메일을 입력하세요"
+                required
+              />
+              <span class="form-error" id="signup-email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-password">비밀번호</label>
+              <div class="password-input">
+                <input
+                  type="password"
+                  id="signup-password"
+                  name="password"
+                  placeholder="비밀번호를 입력하세요"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="signup-password-toggle"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <div class="password-strength" id="password-strength">
+                <div class="strength-bar">
+                  <div class="strength-fill" id="strength-fill"></div>
+                </div>
+                <span class="strength-text" id="strength-text"
+                  >비밀번호 강도</span
+                >
+              </div>
+              <span class="form-error" id="signup-password-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-confirm-password">비밀번호 확인</label>
+              <div class="password-input">
+                <input
+                  type="password"
+                  id="signup-confirm-password"
+                  name="confirmPassword"
+                  placeholder="비밀번호를 다시 입력하세요"
+                  required
+                />
+                <button
+                  type="button"
+                  class="password-toggle"
+                  id="signup-confirm-password-toggle"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              <span
+                class="form-error"
+                id="signup-confirm-password-error"
+              ></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-phone">전화번호 (선택)</label>
+              <input
+                type="tel"
+                id="signup-phone"
+                name="phone"
+                placeholder="010-0000-0000"
+              />
+              <span class="form-error" id="signup-phone-error"></span>
+            </div>
+            <div class="form-options">
+              <label class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="agree-terms"
+                  name="agreeTerms"
+                  required
+                />
+                <span class="checkmark"></span>
+                <a href="#" class="terms-link">이용약관</a> 및
+                <a href="#" class="privacy-link">개인정보처리방침</a>에
+                동의합니다
+              </label>
+              <label class="checkbox-container">
+                <input
+                  type="checkbox"
+                  id="agree-marketing"
+                  name="agreeMarketing"
+                />
+                <span class="checkmark"></span>
+                마케팅 정보 수신에 동의합니다 (선택)
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              회원가입
+            </button>
+          </form>
+
+          <div class="divider">
+            <span>또는</span>
+          </div>
+
+          <div class="social-login">
+            <button class="social-btn google-btn" id="google-signup">
+              <i class="fab fa-google"></i>
+              <span>Google로 회원가입</span>
+            </button>
+          </div>
+
+          <div class="auth-switch">
+            <p>
+              이미 계정이 있으신가요? <a href="#" id="show-login">로그인</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2FA Modal -->
+    <div class="modal" id="twofa-modal">
+      <div class="modal-overlay" id="twofa-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>2단계 인증</h3>
+          <button class="modal-close" id="twofa-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="twofa-content">
+            <div class="twofa-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <p>보안을 위해 2단계 인증이 필요합니다.</p>
+            <p>인증 앱에서 생성된 6자리 코드를 입력하세요.</p>
+            <form class="auth-form" id="twofa-form">
+              <div class="form-group">
+                <label for="twofa-code">인증 코드</label>
+                <input
+                  type="text"
+                  id="twofa-code"
+                  name="code"
+                  placeholder="000000"
+                  maxlength="6"
+                  required
+                />
+                <span class="form-error" id="twofa-code-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                인증하기
+              </button>
+            </form>
+            <div class="twofa-help">
+              <p>
+                코드를 받지 못하셨나요?
+                <a href="#" id="twofa-backup">백업 코드 사용</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal">
+      <div class="modal-overlay" id="success-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>성공!</h3>
+          <button class="modal-close" id="success-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="success-content">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <p id="success-message">로그인에 성공했습니다!</p>
+            <button class="btn btn-primary" id="success-ok">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
