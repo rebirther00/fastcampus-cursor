@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useCartStore } from '@/with-rules/features/cart/model/cartStore';
+import WishlistButton from '@/with-rules/features/wishlist/ui/WishlistButton';
 import type { Product } from '@/with-rules/shared/types/product';
 
 interface ProductActionsProps {
@@ -114,13 +115,22 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
 
       {/* 액션 버튼들 */}
       <div className="space-y-3">
-        <Button
-          onClick={handleAddToCart}
-          disabled={product.availability === 'out-of-stock' || isAddingToCart}
-          className="w-full"
-        >
-          {isAddingToCart ? '장바구니에 추가 중...' : '장바구니에 담기'}
-        </Button>
+        <div className="flex space-x-3">
+          <Button
+            onClick={handleAddToCart}
+            disabled={product.availability === 'out-of-stock' || isAddingToCart}
+            className="flex-1"
+          >
+            {isAddingToCart ? '장바구니에 추가 중...' : '장바구니에 담기'}
+          </Button>
+          
+          <WishlistButton 
+            product={product} 
+            variant="icon" 
+            size="lg"
+            className="flex-shrink-0"
+          />
+        </div>
         
         <Button
           onClick={handleBuyNow}
@@ -129,6 +139,14 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
         >
           바로 구매하기
         </Button>
+        
+        {/* 위시리스트 버튼 (풀 사이즈) */}
+        <WishlistButton 
+          product={product} 
+          variant="button" 
+          size="md"
+          className="w-full"
+        />
       </div>
 
       {/* 태그들 */}
